@@ -1,0 +1,30 @@
+(A)	INSERTING DATA
+CREATE TABLE Books(Id INTEGER PRIMARY KEY, Title VARCHAR(100), Author VARCHAR(60));
+
+The INSERT statement is used to insert data into tables.
+
+We will create a new table, where we will do our examples.
+
+CREATE TABLE Books(Id INTEGER PRIMARY KEY, Title VARCHAR(100), Author VARCHAR(60));
+
+We create a new table Books, with Id, Title and Author columns.
+
+> INSERT INTO Books(Id, Title, Author) VALUES(1, 'War and Peace', 'Leo Tolstoy');
+
+SELECT * FROM Books;
+
+INSERT INTO Books(Title, Author) VALUES ('The Brothers Karamazov',
+-> 'Fyodor Dostoyevsky');
+
+INSERT INTO Books VALUES(3, 'Crime and Punishment',
+-> 'Fyodor Dostoyevsky');
+
+REPLACE INTO Books VALUES(3, 'Paradise Lost', 'John Milton'); Query OK, 2 rows affected (0.00 sec)
+
+mysql> INSERT INTO Books2 SELECT * FROM Books; Query OK, 3 rows affected (0.00 sec)
+Records: 3 Duplicates: 0 Warnings: 0
+
+
+C.) update 
+UPDATE Books SET Author='Lev Nikolayevich Tolstoy'
+-> WHERE Id=1;
