@@ -1,0 +1,72 @@
+CREATING SIMPLE TABLE WITH CONSTRAINTS
+AIM:
+To create a simple table using constraints
+
+ 
+PROGRAM:
+
+CREATE TABLE Persons (
+PersonID int,
+LastName varchar(255), FirstName varchar(255), Address varchar(255), City varchar(255)
+);
+ NOt nulll constraint
+
+CREATE TABLE PersonsNotNull (
+P_Id int NOT NULL,
+LastName varchar(255) NOT NULL,
+FirstName varchar(255),
+Address varchar(255), City varchar(255)
+);
+
+SQL UNIQUE Constraint on CREATE TABLE
+
+CREATE TABLE Persons (
+P_Id int NOT NULL,
+LastName varchar(255) NOT NULL, FirstName varchar(255),
+Address varchar(255), City varchar(255), UNIQUE (P_Id)
+);
+ 
+
+
+SQL PRIMARY KEY Constraint on CREATE TABLE
+
+CREATE TABLE Persons (
+P_Id int NOT NULL,
+LastName varchar(255) NOT NULL, FirstName varchar(255),
+Address varchar(255), City varchar(255), PRIMARY KEY (P_Id)
+);
+
+
+SQL FOREIGN KEY Constraint
+
+CREATE TABLE Orders (
+O_Id int NOT NULL, OrderNo int NOT NULL, P_Id int,
+PRIMARY KEY (O_Id),
+FOREIGN KEY (P_Id) REFERENCES Persons(P_Id)
+);
+
+
+
+SQL CHECK Constraint on CREATE TABLE
+
+CREATE TABLE Persons (
+P_Id int NOT NULL,
+LastName varchar(255) NOT NULL, FirstName varchar(255),
+Address varchar(255), City varchar(255), CHECK (P_Id>0)
+);
+ 
+
+
+
+
+
+
+SQL DEFAULT Constraint on CREATE TABLE
+
+CREATE TABLE Persons (
+P_Id int NOT NULL,
+LastName varchar(255) NOT NULL, FirstName varchar(255),
+Address varchar(255),
+City varchar(255) DEFAULT 'Sandnes'
+);
+
