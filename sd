@@ -1,0 +1,44 @@
+(A)	SELECTING ALL DATA
+SELECT * FROM pet;
+UPDATE pet SET birth = '1989-08-31' WHERE name = 'Bowser'
+2.SELECT * FROM pet WHERE name = 'Bowser';
+3.LECT * FROM pet WHERE birth >= '1998-1-1';
+
+(B)	SELECTING PARTICULAR COLUMNS
+SELECT name, birth FROM pet;
+For example, to get birth dates for dogs and cats only, use this query:
+mysql> SELECT name, species, birth FROM pet
+-> WHERE species = 'dog' OR species = 'cat';
+
+(C)	SORTING ROWS
+SELECT name, birth FROM pet ORDER BY birth;
+SELECT name, birth FROM pet ORDER BY birth DESC;
+or example, to sort by type of animal in ascending order, then by birth date within animal type in descending order (youngest animals first), use the following query:
+SELECT name, species, birth FROM pet
+-> ORDER BY species, birth DESC;
+
+
+(D)	WORKING WITH NULL VALUES
+SELECT 1 IS NULL, 1 IS NOT NULL;
+
+
+(E)	PATTERN MATCHING
+SELECT * FROM pet WHERE name LIKE 'b%';
+mysql> SELECT * FROM pet WHERE name LIKE '%fy';
+mysql> SELECT * FROM pet WHERE name LIKE '%w%';
+
+(F)	COUNTING ROWS
+SELECT COUNT(*) FROM pet;
+SELECT owner, COUNT(*) FROM pet GROUP BY owner;
+SELECT species, COUNT(*) FROM pet GROUP BY species;
+
+(G)	USING MORE THAN ONE TABLE
+mysql> SELECT pet.name,
+-> TIMESTAMPDIFF(YEAR,birth,date) AS age,
+-> remark
+-> FROM pet INNER JOIN event
+-> ON pet.name = event.name
+-> WHERE event.type = 'litter';
+
+
+
