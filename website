@@ -1,31 +1,7 @@
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" href="style.css">
-<body>
-    <div class="top">MobileNew</div>
-
-    <nav>
-        <ul>
-            <li><a href="link.html">home</a></li>
-            <li><a href="kin.html">contact</a></li>
-            <li><a href="link.html">about</a></li>
-            <li><a href="link.html">login</a></li>
-            <li><a href="link.html">signup</a></li>
-            <input type="search" class="src" placeholder="search">
-        </ul>
-    </nav>
-    <div class="midcontainer">
-
-        <a class="active1" href="below.html" style="color:skyblue;"> Phones Under 20k </a>
-       <br>
-        
-        <a class="active1" href="above20k.html" style="color:skyblue;"> Phones Above 20k </a>
-
-
-    </div>
-</body>
-
-</html>
+<head>
+<style>
 *{
     box-sizing: border-box;
     margin: 0;
@@ -83,3 +59,32 @@ nav ul li:hover{
     font-size: 50px;
     text-decoration: none;
 }
+</style>
+
+</head>
+<body>
+    <div class="top">MobileNew</div>
+
+    <nav>
+        <ul>
+            <li><a href="link.html">home</a></li>
+            <li><a href="kin.html">contact</a></li>
+            <li><a href="link.html">about</a></li>
+            <li><a href="link.html">login</a></li>
+            <li><a href="link.html">signup</a></li>
+            <input type="search" class="src" placeholder="search">
+        </ul>
+    </nav>
+    <div class="midcontainer">
+
+        <a class="active1" href="below.html" style="color:skyblue;"> Phones Under 20k </a>
+       <br>
+        
+        <a class="active1" href="above20k.html" style="color:skyblue;"> Phones Above 20k </a>
+
+
+    </div>
+</body>
+
+</html>
+
